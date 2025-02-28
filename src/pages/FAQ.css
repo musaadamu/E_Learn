@@ -1,6 +1,5 @@
-/* FAQ.css */
+/* FAQPage.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -93,4 +92,40 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2em; /* Adjust header font size */
+    }
+
+    .page-header p {
+        font-size: 1em; /* Adjust paragraph font size */
+    }
+
+    .faq-section {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .faq-search input {
+        width: 90%; /* Increase input width on smaller screens */
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    .faq-list {
+        padding: 0 10px; /* Adjust padding for FAQ list */
+    }
+
+    .faq-item {
+        padding: 15px; /* Adjust padding in FAQ items */
+    }
+
+    .faq-item h3 {
+        font-size: 1.5em; /* Adjust FAQ item header size */
+    }
+
+    .faq-item p {
+        font-size: 0.9em; /* Adjust FAQ item paragraph size */
+    }
 }

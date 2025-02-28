@@ -1,6 +1,5 @@
-/* Messaging.css */
+/* FacultyMessaging.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -180,4 +179,21 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .messaging-container {
+        flex-direction: column; /* Stack columns vertically */
+        margin: 10px; /* Adjust margin */
+    }
+
+    .conversation-list {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 15px; /* Space between sections */
+    }
+
+    .chat-window {
+        width: 100%; /* Full width on smaller screens */
+    }
 }

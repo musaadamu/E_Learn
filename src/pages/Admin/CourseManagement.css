@@ -1,6 +1,5 @@
 /* CourseManagement.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -101,4 +100,39 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .action-bar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        margin: 10px; /* Reduce margin for mobile */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .action-bar input {
+        width: 100%; /* Full-width input on mobile */
+        margin-bottom: 10px; /* Space below input */
+    }
+
+    .course-card {
+        padding: 10px; /* Reduce padding in course cards */
+    }
+
+    .course-card h2 {
+        font-size: 1.2em; /* Smaller title font size */
+    }
+
+    .course-card p {
+        font-size: 0.9em; /* Smaller paragraph font size */
+    }
+
+    .page-header h1 {
+        font-size: 1.5em; /* Smaller header font size */
+    }
+
+    .breadcrumb {
+        font-size: 0.8em; /* Smaller breadcrumb font size */
+    }
 }

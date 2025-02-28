@@ -1,6 +1,5 @@
 /* Header.css */
 
-/* General styles */
 .site-header {
     background-color: #4a90e2;
     color: white;
@@ -94,7 +93,6 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: background-color 0.3s;
 }
 
 .login-btn {
@@ -112,4 +110,43 @@
 
 .login-btn:hover {
     background-color: #3a7cb4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column; /* Stack header elements vertically */
+        padding: 10px; /* Reduce padding */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .header-branding {
+        margin-bottom: 10px; /* Space between branding and nav */
+    }
+
+    .site-name {
+        font-size: 1.3em; /* Smaller site name font size */
+    }
+
+    .tagline {
+        font-size: 0.8em; /* Smaller tagline font size */
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center align nav items */
+    }
+
+    .nav-list li {
+        margin: 5px 0; /* Space between nav items */
+    }
+
+    .utility-btn {
+        font-size: 18px; /* Slightly smaller utility button font size */
+    }
+
+    .cta-btn {
+        font-size: 0.9em; /* Smaller button font size */
+        padding: 8px 12px; /* Reduce padding */
+    }
 }

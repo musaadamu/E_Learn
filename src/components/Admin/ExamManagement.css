@@ -1,6 +1,5 @@
 /* ExamManagement.css */
 
-/* General styles */
 .admin-exam-management {
     background-color: #f9f9f9;
     padding: 20px;
@@ -137,4 +136,47 @@
 
 .pagination button:hover {
     background-color: #3a7cb4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-exam-management {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .page-header h1 {
+        font-size: 1.8em; /* Smaller header font size */
+    }
+
+    .action-bar {
+        flex-direction: column; /* Stack action bar items vertically */
+        align-items: stretch; /* Full-width items */
+    }
+
+    .search-input {
+        margin-bottom: 10px; /* Space below search input */
+        width: 100%; /* Full width on small screens */
+    }
+
+    .exam-card {
+        padding: 15px; /* Reduce padding on exam cards */
+    }
+
+    .exam-header h2 {
+        font-size: 1.3em; /* Smaller exam header font size */
+    }
+
+    .exam-details {
+        font-size: 0.9em; /* Smaller font size for exam details */
+    }
+
+    .exam-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch; /* Full-width buttons */
+    }
+
+    .exam-actions button {
+        width: 100%; /* Full-width buttons */
+        margin-bottom: 10px; /* Space between buttons */
+    }
 }

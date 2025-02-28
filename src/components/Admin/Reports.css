@@ -1,6 +1,5 @@
 /* Reports.css */
 
-/* General styles */
 .admin-reports {
     background-color: #f9f9f9;
     padding: 20px;
@@ -115,4 +114,41 @@
 
 .export-options button:hover {
     background-color: #3a7cb4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-reports {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .page-header h1 {
+        font-size: 1.8em; /* Smaller header font size */
+    }
+
+    .filter-panel {
+        flex-direction: column; /* Stack filter elements vertically */
+    }
+
+    .filter-group {
+        margin-bottom: 10px; /* Space between filter groups */
+    }
+
+    .filter-group input[type="date"] {
+        width: 100%; /* Full width for date input */
+    }
+
+    .report-chart {
+        height: 200px; /* Adjust chart height for smaller screens */
+    }
+
+    .export-options {
+        flex-direction: column; /* Stack export buttons vertically */
+        align-items: flex-start; /* Align left */
+    }
+
+    .export-options button {
+        width: 100%; /* Full-width export buttons */
+        margin-bottom: 10px; /* Space between buttons */
+    }
 }

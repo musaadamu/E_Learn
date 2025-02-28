@@ -1,6 +1,5 @@
-/* Login.css */
+/* AuthForm.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -95,4 +94,29 @@ button:hover {
 
 .auth-links a:hover {
     color: #ff6f61;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .auth-form {
+        margin: 20px; /* Reduce margin on smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .branding h1 {
+        font-size: 1.8em; /* Smaller header font size */
+    }
+
+    .branding h2 {
+        font-size: 1.3em; /* Smaller subheader font size */
+    }
+
+    .form-group input {
+        padding: 8px; /* Reduce padding in input fields */
+        font-size: 0.9em; /* Smaller font size in inputs */
+    }
+
+    button {
+        padding: 8px; /* Reduce padding in button */
+    }
 }

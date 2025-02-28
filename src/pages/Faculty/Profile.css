@@ -1,6 +1,5 @@
-/* Profile.css */
+/* FacultyProfile.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -149,4 +148,33 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-overview {
+        flex-direction: column; /* Stack picture and info vertically */
+        align-items: center; /* Center align items */
+        margin: 10px; /* Adjust margin */
+    }
+
+    .profile-picture {
+        margin: 0 0 10px; /* Adjust margin for smaller screens */
+    }
+
+    .edit-profile,
+    .profile-navigation {
+        margin: 10px; /* Reduce margin */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .form-group input {
+        width: 100%; /* Make input fields full width */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width */
+        margin-right: 0; /* Remove right margin */
+        margin-top: 10px; /* Add top margin */
+    }
 }

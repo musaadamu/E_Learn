@@ -1,6 +1,5 @@
 /* Footer.css */
 
-/* General styles */
 .site-footer {
     background-color: #333;
     color: white;
@@ -72,4 +71,32 @@
 .footer-bottom p {
     margin: 0;
     font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column; /* Stack footer columns vertically */
+        padding: 20px 5%; /* Adjust padding for smaller screens */
+    }
+
+    .footer-column {
+        margin: 10px 0; /* Space between stacked columns */
+        text-align: center; /* Center text in columns */
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+        font-size: 1.2em; /* Smaller header font size */
+    }
+
+    .footer-column p,
+    .footer-bottom p {
+        font-size: 0.8em; /* Smaller paragraph font size */
+    }
+    
+    .social-links {
+        justify-content: center; /* Center social links */
+        margin-top: 10px; /* Add space above social links */
+    }
 }

@@ -1,6 +1,5 @@
-/* MyCourses.css */
+/* FacultyMyCourses.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -105,4 +104,20 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-filter-bar {
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
+
+    .course-list {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .course-card {
+        width: 90%; /* Make course cards full width on smaller screens */
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+    }
 }

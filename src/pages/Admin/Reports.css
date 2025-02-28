@@ -1,6 +1,5 @@
 /* Reports.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -118,4 +117,35 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .filter-panel {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        margin: 10px; /* Reduce margin for mobile */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .filter-group {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add space below filter groups */
+    }
+
+    .report-display {
+        padding: 15px; /* Reduce padding in report display section */
+    }
+
+    .report-chart {
+        height: 200px; /* Smaller chart height on mobile */
+    }
+
+    .page-header h1 {
+        font-size: 1.5em; /* Smaller header font size */
+    }
+
+    .breadcrumb {
+        font-size: 0.8em; /* Smaller breadcrumb font size */
+    }
 }

@@ -1,6 +1,5 @@
 /* FacultyCard.css */
 
-/* General styles */
 .admin-faculty-card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -68,4 +67,34 @@
 
 .manage-link:hover {
     color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-faculty-card {
+        padding: 15px; /* Reduce padding on smaller screens */
+        margin: 10px; /* Reduce margin on smaller screens */
+    }
+
+    .card-header h2 {
+        font-size: 1.3em; /* Smaller header font size */
+    }
+
+    .card-details {
+        font-size: 0.9em; /* Smaller font size for details */
+    }
+
+    .card-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch; /* Full-width buttons */
+    }
+
+    .card-actions button {
+        width: 100%; /* Full-width buttons */
+        margin-bottom: 10px; /* Space between buttons */
+    }
+
+    .manage-link {
+        font-size: 0.9em; /* Smaller font size for manage link */
+    }
 }

@@ -1,6 +1,5 @@
-/* Dashboard.css */
+/* FacultyDashboard.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -119,4 +118,30 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .overview-section {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+        margin: 10px; /* Reduce margin */
+    }
+
+    .metrics-cards {
+        flex-direction: column; /* Stack metrics cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .metric-card {
+        width: 90%; /* Make metric cards full width */
+    }
+
+    .dashboard-cards {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .dashboard-card {
+        width: 90%; /* Make dashboard cards full width */
+        margin: 10px 0; /* Reduce margin */
+    }
 }

@@ -1,6 +1,5 @@
-/* CourseDetail.css */
+/* FacultyCourseDetail.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -147,4 +146,22 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .course-overview,
+    .materials-section,
+    .announcements-section {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+        margin: 10px; /* Reduce margin */
+    }
+
+    .material-card {
+        width: 90%; /* Make material cards full width on smaller screens */
+    }
+
+    .action-panel {
+        padding: 15px; /* Adjust action panel padding */
+    }
 }

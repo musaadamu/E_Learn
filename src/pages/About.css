@@ -1,6 +1,5 @@
-/* About.css */
+/* AboutPage.css */
 
-/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -126,4 +125,33 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2em; /* Adjust header font size */
+    }
+
+    .page-header p {
+        font-size: 1em; /* Adjust paragraph font size */
+    }
+
+    .platform-info, .team-values {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .platform-info h2,
+    .team-values h2 {
+        font-size: 1.8em; /* Adjust section header font size */
+    }
+
+    .team-member {
+        width: 90%; /* Make team member cards full width on smaller screens */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .core-values li {
+        font-size: 1em; /* Adjust core values font size */
+    }
 }

@@ -1,6 +1,5 @@
 /* Navigation.css */
 
-/* General styles */
 body {
     margin: 0;
     padding: 0;
@@ -80,5 +79,10 @@ body {
 
     .nav-links li {
         margin: 10px 0; /* Margin for vertical spacing */
+    }
+
+    .nav-links a {
+        font-size: 18px; /* Larger font size for mobile */
+        padding: 10px; /* Add padding for clickable area */
     }
 }
