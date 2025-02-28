@@ -1,0 +1,84 @@
+/* Navigation.css */
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Navigation */
+.main-navigation {
+    background-color: #4a90e2;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown on mobile */
+}
+
+.hamburger-icon {
+    display: inline-block;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #ff6f61;
+}
+
+/* Call-to-Action Items */
+.nav-cta a {
+    font-weight: bold;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        width: 100%;
+        background-color: #4a90e2;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hidden by default */
+    }
+
+    .nav-links.open {
+        display: flex; /* Show links when open */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Margin for vertical spacing */
+    }
+}

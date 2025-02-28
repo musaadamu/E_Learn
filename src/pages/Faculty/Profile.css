@@ -1,0 +1,152 @@
+/* Profile.css */
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Profile page styles */
+.faculty-profile {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Profile Overview Section */
+.profile-overview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-info h2 {
+    margin: 0 0 10px;
+    color: #4a90e2;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Editable Profile Information Section */
+.edit-profile {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.edit-profile h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3a7cb4;
+}
+
+/* Profile Navigation Section */
+.profile-navigation {
+    margin: 20px;
+}
+
+.profile-navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-navigation li {
+    margin: 5px 0;
+}
+
+.profile-navigation a {
+    text-decoration: none;
+    color: #4a90e2;
+    transition: color 0.3s;
+}
+
+.profile-navigation a:hover {
+    color: #ff6f61;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

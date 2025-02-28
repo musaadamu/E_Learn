@@ -1,0 +1,80 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .not-found-content {
+    max-width: 600px;
+  }
+  
+  .not-found-content h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: #e74c3c;
+    font-weight: 700;
+  }
+  
+  .not-found-content h2 {
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+    color: #333;
+  }
+  
+  .not-found-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .not-found-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .not-found-actions a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .home-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .home-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .courses-button {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .courses-button:hover {
+    background-color: #e5e5e5;
+  }
+  
+  @media (max-width: 480px) {
+    .not-found-content h1 {
+      font-size: 4rem;
+    }
+    
+    .not-found-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .not-found-actions {
+      flex-direction: column;
+    }
+  }

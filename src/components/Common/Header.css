@@ -1,0 +1,115 @@
+/* Header.css */
+
+/* General styles */
+.site-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Branding Block */
+.header-branding {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.9em;
+    color: #d1d1d1;
+}
+
+/* Navigation Menu */
+.header-nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #ff6f61;
+}
+
+/* Utility/User Actions */
+.header-utilities {
+    display: flex;
+    align-items: center;
+}
+
+.utility-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.utility-btn:hover {
+    color: #ff6f61;
+}
+
+.cta-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-btn {
+    background-color: #4a90e2;
+}
+
+.register-btn {
+    background-color: #ff6f61;
+    margin-left: 10px;
+}
+
+.register-btn:hover {
+    background-color: #e55a50;
+}
+
+.login-btn:hover {
+    background-color: #3a7cb4;
+}

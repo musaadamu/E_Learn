@@ -1,0 +1,127 @@
+/* Sidebar.css */
+
+/* General styles */
+.site-sidebar {
+    width: 250px;
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .site-sidebar {
+        width: 200px; /* Adjust width on smaller screens */
+        padding: 15px;
+    }
+
+    .sidebar-profile .avatar {
+        width: 40px; /* Smaller avatar for mobile */
+        height: 40px;
+    }
+
+    .user-name {
+        font-size: 1em; /* Adjust font sizes */
+    }
+
+    .user-role {
+        font-size: 0.8em;
+    }
+
+    .sidebar-nav a {
+        font-size: 0.9em; /* Adjust link font sizes */
+    }
+}
+
+/* User Profile Block */
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.user-role {
+    font-size: 0.9em;
+    color: #d1d1d1;
+}
+
+/* Navigation Menu */
+.sidebar-nav {
+    flex-grow: 1;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin: 15px 0;
+}
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.sidebar-nav a:hover {
+    color: #ff6f61;
+}
+
+/* Utilities Block */
+.sidebar-utilities {
+    margin-top: auto;
+}
+
+.sidebar-search {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.sidebar-search::placeholder {
+    color: #d1d1d1;
+}
+
+.create-action {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-action:hover {
+    background-color: #e55a50;
+}

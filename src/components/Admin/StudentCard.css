@@ -1,0 +1,71 @@
+/* StudentCard.css */
+
+/* General styles */
+.admin-student-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Block */
+.card-header {
+    border-bottom: 2px solid #4a90e2;
+    margin-bottom: 15px;
+}
+
+.card-header h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Details Block */
+.card-details {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #555;
+}
+
+.card-details p {
+    margin: 5px 0;
+}
+
+/* Action Buttons Block */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-actions button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-actions button:hover {
+    background-color: #3a7cb4;
+}
+
+.manage-link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.manage-link:hover {
+    color: #ff6f61;
+}

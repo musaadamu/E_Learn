@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Home Page Layout */
+.home-page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar-wrapper {
+    width: 250px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #2c3e50;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+/* Toggle Button */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 200;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #ff4a43;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-count {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3498db;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.features-section h2 {
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Faculty Showcase Section */
+.faculty-showcase-section {
+    padding: 80px 50px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.faculty-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+/* Popular Courses Section */
+.popular-courses-section {
+    padding: 80px 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 50px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    padding: 80px 50px;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page {
+        flex-direction: column;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+    }
+    
+    .hero-section {
+        padding: 40px 15px;
+    }
+    
+    .cta-button {
+        padding: 12px 20px;
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .faculty-cards-container,
+    .courses-container,
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+    
+    .features-section h2, 
+    .faculty-showcase-section h2, 
+    .cta-section h2 {
+        font-size: 1.6em;
+    }
+}
