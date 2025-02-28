@@ -1,0 +1,149 @@
+/* CourseDetail.css */
+
+.student-course-detail {
+    background-color: #f9f9f9;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Course Overview Section */
+.course-overview {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-overview p {
+    margin: 10px 0;
+}
+
+/* Materials Section */
+.materials-section {
+    margin-bottom: 20px;
+}
+
+.materials-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.materials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.material-card {
+    background-color: #f0f4f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.material-card h3 {
+    margin: 0 0 5px;
+}
+
+.material-card a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.material-card a:hover {
+    text-decoration: underline;
+}
+
+/* Announcements Section */
+.announcements-section {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcements-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.announcements-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.announcements-section li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.announcements-section small {
+    color: #888;
+}
+
+/* Additional Navigation / Action Tabs */
+.additional-tabs {
+    margin-top: 20px;
+}
+
+.additional-tabs ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.additional-tabs li {
+    display: inline;
+}
+
+.additional-tabs a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.additional-tabs a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .student-course-detail {
+        padding: 15px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .materials-section h2,
+    .announcements-section h2 {
+        font-size: 1.5rem;
+    }
+}

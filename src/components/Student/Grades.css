@@ -1,0 +1,74 @@
+/* Grades.css */
+
+.student-grades {
+    background-color: #f9f9f9;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading State */
+.grades-loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3498db;
+    margin: 20px 0;
+}
+
+/* Error State */
+.grades-error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin: 20px 0;
+}
+
+/* Table Styles */
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.grades-table th, .grades-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.grades-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.grades-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* CGPA Summary */
+.cgpa-summary {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+.cgpa-summary strong {
+    color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .student-grades {
+        padding: 15px;
+    }
+
+    .grades-table th, .grades-table td {
+        padding: 8px;
+    }
+
+    .cgpa-summary {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,148 @@
+/* CourseList.css */
+
+.faculty-course-list {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    margin-bottom: 1rem;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.breadcrumbs a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Page Header */
+.flex {
+    display: flex;
+}
+
+.flex.justify-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Search & Filter Bar */
+.bg-gray-100 {
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Course List Container */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Loading Spinner */
+.loading {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #3498db;
+    border-top: 5px solid #f3f3f3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pagination */
+.join {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.join-item {
+    padding: 0.5rem 1rem;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    background-color: white;
+    color: #3498db;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-active {
+    background-color: #3498db;
+    color: white;
+}
+
+.join-item:hover:not(.btn-active) {
+    background-color: #f0f0f0;
+}
+
+/* No Courses Found */
+.text-center {
+    text-align: center;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bg-gray-100 {
+        padding: 15px;
+    }
+
+    .input, .select {
+        width: 100%;
+    }
+}

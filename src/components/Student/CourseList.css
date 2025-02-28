@@ -1,0 +1,129 @@
+/* CourseList.css */
+
+.student-course-list {
+    background-color: #f9f9f9;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Search & Filter Section */
+.search-filter-section {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Course List Container */
+.course-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Course Card */
+.course-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-title {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.course-description {
+    margin: 5px 0;
+    color: #555;
+}
+
+.course-details {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* View Details Button */
+.view-details-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.view-details-button:hover {
+    background-color: #2980b9;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pagination-controls button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .student-course-list {
+        padding: 15px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .search-input {
+        max-width: 100%;
+    }
+
+    .course-title {
+        font-size: 1.2rem;
+    }
+}
