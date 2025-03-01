@@ -18,16 +18,16 @@ const Sidebar = () => {
         </div>
       </div>
       
-      {/* Navigation Menu/Links Block */}
+      Navigation Menu/Links Block */}
       <nav className="sidebar-nav">
         <ul>
-          {/* Common Pages */}
+          {/* Common Pages
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/faq">FAQ</Link></li>
-          
-          {/* Role-based Pages */}
+           */}
+          {/* Role-based Pages
           {userRole === "Admin" && (
             <>
               <li><Link to="/admin/dashboard">Dashboard</Link></li>
@@ -68,7 +68,7 @@ const Sidebar = () => {
           <li><Link to="/services/report">Report Services</Link></li>
           
           {/* Auth */}
-          <li className="sidebar-section-title">Account</li>
+          {/* <li className="sidebar-section-title">Account</li> */}
           <li><Link to="/auth/login">Login</Link></li>
           <li><Link to="/auth/register">Register</Link></li>
         </ul>
