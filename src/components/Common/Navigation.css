@@ -1,59 +1,73 @@
-/* Navigation.css */
-
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
 
-/* Main Navigation */
+/* General Navbar Styles */
 .main-navigation {
-    background-color: #4a90e2;
+    display: flex;
+    justify-content: space-between; /* Space between title and nav items */
+    align-items: center;
+    background-color: #34495e; /* Dark background for the navbar */
     padding: 10px 20px;
-    position: relative;
+    width: 100%; /* Extend to full width */
+    /* Remove max-width to allow full width */
+    margin: 0; /* Remove centering margin */
 }
 
-.hamburger {
-    background: none;
-    border: none;
+/* Title Styles */
+.navbar-title {
+    margin-left: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Prevent line break */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: white;
+    font-size: 1.5rem;
     cursor: pointer;
     display: none; /* Hidden by default, shown on mobile */
 }
 
-.hamburger-icon {
-    display: inline-block;
-}
-
-/* Navigation Links */
+/* Navigation List Styles */
 .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex; /* Default to row layout */
     justify-content: flex-end;
+    align-items: center; /* Center items vertically */
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 15px; /* Adjusted margin for spacing */
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
+    font-size: 1.2rem; /* Increased font size */
+    padding: 10px; /* Padding for clickable area */
+    transition: background-color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-    color: #ff6f61;
+    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
 }
 
-/* Call-to-Action Items */
-.nav-cta a {
-    font-weight: bold;
+/* Logout Button */
+.logout-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
 
 /* Mobile Styles */
@@ -63,26 +77,18 @@ body {
     }
 
     .nav-links {
-        position: absolute;
-        top: 60px; /* Adjust based on navbar height */
-        left: 0;
+        flex-direction: column; /* Vertical layout for mobile */
         width: 100%;
-        background-color: #4a90e2;
-        flex-direction: column;
-        align-items: center;
-        display: none; /* Hidden by default */
+        max-height: 0; /* Initially hidden */
+        overflow: hidden; /* Prevent overflow */
+        transition: max-height 0.3s ease; /* Smooth transition */
     }
 
-    .nav-links.open {
-        display: flex; /* Show links when open */
+    .nav-links.active {
+        max-height: 300px; /* Adjust based on your items */
     }
 
     .nav-links li {
-        margin: 10px 0; /* Margin for vertical spacing */
-    }
-
-    .nav-links a {
-        font-size: 18px; /* Larger font size for mobile */
-        padding: 10px; /* Add padding for clickable area */
+        margin: 10px 0; /* Spacing between items in mobile view */
     }
 }

@@ -12,6 +12,7 @@ const Register = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // Determine the API URL based on the environment.
   const apiUrl =
     process.env.NODE_ENV === "production"
       ? "https://backend-lms-render.onrender.com"
@@ -19,6 +20,8 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       return;
@@ -38,6 +41,7 @@ const Register = () => {
       if (!response.ok) {
         throw new Error(data.message || "Registration failed");
       }
+      // On successful registration, navigate to the login page
       navigate("/login");
     } catch (err) {
       setError(err.message);

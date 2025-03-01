@@ -11,19 +11,22 @@ const Navigation = () => {
 
   return (
     <nav className="main-navigation">
-      {/* Mobile Hamburger Menu */}
-      <button 
-        className="hamburger" 
-        onClick={toggleMenu} 
-        aria-label="Toggle Navigation Menu"
-      >
-        <span className="hamburger-icon">
-          {menuOpen ? "✖" : "☰"}
-        </span>
-      </button>
+      {/* Navbar Title */}
+      <div className="navbar-header">
+       
+        <button 
+          className="hamburger" 
+          onClick={toggleMenu} 
+          aria-label="Toggle Navigation Menu"
+        >
+          <span className="hamburger-icon">
+            {menuOpen ? "✖" : "☰"}
+          </span>
+        </button>
+      </div>
       
       {/* Primary Navigation Menu */}
-      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
           <NavLink 
             to="/" 
@@ -65,7 +68,6 @@ const Navigation = () => {
             FAQ
           </NavLink>
         </li>
-        {/* Call-to-Action Items */}
         <li className="nav-cta">
           <NavLink 
             to="/login" 

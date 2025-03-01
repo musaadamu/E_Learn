@@ -11,6 +11,8 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Use correct API URL based on your environment.
+  // For Vite: import.meta.env.VITE_API_URL; for CRA: process.env.REACT_APP_API_URL.
   const apiUrl =
     process.env.NODE_ENV === "production"
       ? "https://backend-lms-render.onrender.com"
@@ -31,6 +33,7 @@ const Login = () => {
       if (!response.ok) {
         throw new Error(data.message || "Login failed");
       }
+      // Save the token and update AuthContext.
       handleLogin(data.token);
       navigate("/");
     } catch (err) {

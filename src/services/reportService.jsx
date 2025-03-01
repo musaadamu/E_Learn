@@ -1,7 +1,7 @@
 import axios from "axios";
 import './reportService.css';
 
-const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const apiUrl =  process.env.REACT_APP_API_URL  || "http://localhost:5000";
 
 export const generateStudentReport = async (studentId) => {
   try {

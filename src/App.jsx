@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-// Import AuthContext and AuthProvider
+// Auth Context and Provider
 import { AuthProvider, AuthContext } from "./components/Auth/AuthContext";
 
 // Public Pages
@@ -36,12 +36,14 @@ import StudentMyCourses from "./pages/Student/MyCourses";
 import StudentCourseDetail from "./pages/Student/CourseDetail";
 import StudentProfile from "./pages/Student/Profile";
 
-// Not Found Page (Optional)
-import NotFound from "./pages/NotFound";
+// Common Components
+import Header from "./components/Common/Header"; // Header includes navigation
 import Footer from "./components/Common/Footer";
-import Navigation from "./components/Common/Navigation";
-import MyCourses from "./pages/Faculty/MyCourses";
+import Sidebar from "./components/Common/Sidebar";
+import Navigation from "./components/Common/Navigation"
 
+// Not Found Page
+import NotFound from "./pages/NotFound";
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
   const { authenticated, user } = useContext(AuthContext);
@@ -55,24 +57,42 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
 };
 
 function App() {
+  const [sidebarActive, setSidebarActive] = useState(false);
+  const toggleSidebar = () => {
+    setSidebarActive(!sidebarActive);
+  };
+
   return (
     <AuthProvider>
       <Router>
         <div className="app-container">
-          <header>
-            <Navigation />
-            {/* Optionally include your NavBar or Header here */}
-          </header>
-          <main>
+          {/* Sidebar Toggle Button (visible on mobile) */}
+          <button 
+            className="sidebar-toggle" 
+            onClick={toggleSidebar} 
+            aria-label="Toggle sidebar"
+          >
+            {sidebarActive ? "✕" : "☰"}
+          </button>
+
+          {/* Sidebar */}
+          {sidebarActive && (
+            <div className="sidebar-wrapper">
+              <Sidebar />
+            </div>
+          )}
+
+          {/* Header (includes primary navigation) */}
+          <Navigation />
+
+          {/* Main Content */}
+          <main className="main-content">
             <Routes>
               {/* Public Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<FAQ />} />
-              <Route path="//student/mycourses" element={<MyCourses />} />
-
-              
 
               {/* Auth Routes */}
               <Route path="/login" element={<Login />} />
@@ -80,136 +100,33 @@ function App() {
               <Route path="/forgot-password" element={<ForgotPassword />} />
 
               {/* Admin Routes */}
-              <Route
-                path="/admin/dashboard"
-                element={
-                  <ProtectedRoute allowedRoles={["admin"]}>
-                    <AdminDashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/faculty"
-                element={
-                  <ProtectedRoute allowedRoles={["admin"]}>
-                    <FacultyManagement />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/departments"
-                element={
-                  <ProtectedRoute allowedRoles={["admin"]}>
-                    <DepartmentManagement />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/courses"
-                element={
-                  <ProtectedRoute allowedRoles={["admin"]}>
-                    <CourseManagement />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/students"
-                element={
-                  <ProtectedRoute allowedRoles={["admin"]}>
-                    <StudentManagement />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/exams"
-                element={
-                  <ProtectedRoute allowedRoles={["admin"]}>
-                    <ExamManagement />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/reports"
-                element={
-                  <ProtectedRoute allowedRoles={["admin"]}>
-                    <Reports />
-                  </ProtectedRoute>
-                }
-              />
+              <Route path="/admin/dashboard" element={<ProtectedRoute allowedRoles={["admin"]}><AdminDashboard /></ProtectedRoute>} />
+              <Route path="/admin/faculty" element={<ProtectedRoute allowedRoles={["admin"]}><FacultyManagement /></ProtectedRoute>} />
+              <Route path="/admin/departments" element={<ProtectedRoute allowedRoles={["admin"]}><DepartmentManagement /></ProtectedRoute>} />
+              <Route path="/admin/courses" element={<ProtectedRoute allowedRoles={["admin"]}><CourseManagement /></ProtectedRoute>} />
+              <Route path="/admin/students" element={<ProtectedRoute allowedRoles={["admin"]}><StudentManagement /></ProtectedRoute>} />
+              <Route path="/admin/exams" element={<ProtectedRoute allowedRoles={["admin"]}><ExamManagement /></ProtectedRoute>} />
+              <Route path="/admin/reports" element={<ProtectedRoute allowedRoles={["admin"]}><Reports /></ProtectedRoute>} />
 
               {/* Faculty Routes */}
-              <Route
-                path="/faculty/dashboard"
-                element={
-                  <ProtectedRoute allowedRoles={["faculty"]}>
-                    <FacultyDashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/faculty/mycourses"
-                element={
-                  <ProtectedRoute allowedRoles={["faculty"]}>
-                    <FacultyMyCourses />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/faculty/course/:id"
-                element={
-                  <ProtectedRoute allowedRoles={["faculty"]}>
-                    <FacultyCourseDetail />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/faculty/profile"
-                element={
-                  <ProtectedRoute allowedRoles={["faculty"]}>
-                    <FacultyProfile />
-                  </ProtectedRoute>
-                }
-              />
+              <Route path="/faculty/dashboard" element={<ProtectedRoute allowedRoles={["faculty"]}><FacultyDashboard /></ProtectedRoute>} />
+              <Route path="/faculty/mycourses" element={<ProtectedRoute allowedRoles={["faculty"]}><FacultyMyCourses /></ProtectedRoute>} />
+              <Route path="/faculty/course/:id" element={<ProtectedRoute allowedRoles={["faculty"]}><FacultyCourseDetail /></ProtectedRoute>} />
+              <Route path="/faculty/profile" element={<ProtectedRoute allowedRoles={["faculty"]}><FacultyProfile /></ProtectedRoute>} />
 
               {/* Student Routes */}
-              <Route
-                path="/student/dashboard"
-                element={
-                  <ProtectedRoute allowedRoles={["student"]}>
-                    <StudentDashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/student/mycourses"
-                element={
-                  <ProtectedRoute allowedRoles={["student"]}>
-                    <StudentMyCourses />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/student/course/:id"
-                element={
-                  <ProtectedRoute allowedRoles={["student"]}>
-                    <StudentCourseDetail />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/student/profile"
-                element={
-                  <ProtectedRoute allowedRoles={["student"]}>
-                    <StudentProfile />
-                  </ProtectedRoute>
-                }
-              />
+              <Route path="/student/dashboard" element={<ProtectedRoute allowedRoles={["student"]}><StudentDashboard /></ProtectedRoute>} />
+              <Route path="/student/mycourses" element={<ProtectedRoute allowedRoles={["student"]}><StudentMyCourses /></ProtectedRoute>} />
+              <Route path="/student/course/:id" element={<ProtectedRoute allowedRoles={["student"]}><StudentCourseDetail /></ProtectedRoute>} />
+              <Route path="/student/profile" element={<ProtectedRoute allowedRoles={["student"]}><StudentProfile /></ProtectedRoute>} />
 
-              {/* Unauthorized & Fallback Routes */}
+              {/* Fallback Routes */}
               <Route path="/unauthorized" element={<div>Unauthorized Access</div>} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
+
+          {/* Footer */}
           <footer>
             <Footer />
           </footer>

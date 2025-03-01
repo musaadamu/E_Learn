@@ -26,7 +26,9 @@ const ForgotPassword = () => {
         body: JSON.stringify({ email }),
       });
       const data = await response.json();
-      if (!response.ok) throw new Error(data.message || "Failed to send reset instructions");
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to send reset instructions");
+      }
       setMessage("Reset instructions have been sent to your email.");
     } catch (err) {
       setError(err.message);

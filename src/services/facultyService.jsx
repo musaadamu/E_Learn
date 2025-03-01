@@ -1,7 +1,7 @@
 import axios from "axios";
 import './facultyService.css';
 
-const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 export const createFaculty = async (facultyData) => {
   try {

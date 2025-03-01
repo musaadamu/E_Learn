@@ -129,9 +129,9 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* Sidebar Toggle Button (visible on mobile) */}
-      <button className="sidebar-toggle" onClick={toggleSidebar} aria-label="Toggle navigation menu">
+      {/* <button className="sidebar-toggle" onClick={toggleSidebar} aria-label="Toggle navigation menu">
         {sidebarActive ? "✕" : "☰"}
-      </button>
+      </button> */}
       
       {/* Sidebar */}
       <div className={`sidebar-wrapper ${sidebarActive ? 'active' : ''}`}>

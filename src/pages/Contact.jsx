@@ -35,24 +35,24 @@ const Contact = () => {
 
       {/* Contact Information Section */}
       <section className="contact-info">
-        <h2>Our Contact Information</h2>
-        <p>Address: 123 University Ave, City, Country</p>
-        <p>Phone: +1 234 567 890</p>
-        <p>Email: info@elearn.com</p>
-        <div className="map-container">
-          <iframe
-            title="Location Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.095658105768!2d-122.08424908468152!3d37.42206597982545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0a8c7b3ad3d%3A0x9c8e81f5b09f2f!2sGoogleplex!5e0!3m2!1sen!2sus!4v1616625020198!5m2!1sen!2sus"
-            width="100%"
-            height="250"
-            frameBorder="0"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            aria-hidden="false"
-            tabIndex="0"
-          ></iframe>
-        </div>
-      </section>
+                <h2>Our Contact Information</h2>
+                <p>Address: College of Education and Legal Studies, Nguru, Yobe State, Nigeria</p>
+                <p>Phone: +234 806 627 6806</p>
+                <p>Email: info@coels.edu.ng</p>
+                <div className="map-container">
+                  <iframe
+                    title="Location Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15600.066464289654!2d12.864423371581164!3d12.879254747462692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11aa0fb532bc31f5%3A0xcf428c236e650e7b!2sNguru%2C%20Nigeria!5e0!3m2!1sen!2s!4v1614363282415!5m2!1sen!2s"
+                    width="100%"
+                    height="250"
+                    frameBorder="0"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    aria-hidden="false"
+                    tabIndex="0"
+                  ></iframe>
+                </div>
+              </section>
 
       {/* Contact Form Section */}
       <section className="contact-form-section">
