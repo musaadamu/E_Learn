@@ -58,7 +58,7 @@ const Sidebar = () => {
           )}
           
           {/* Services Section */}
-          <li className="sidebar-section-title">Services</li>
+          {/* <li className="sidebar-section-title">Services</li>
           <li><Link to="/services/auth">Authentication</Link></li>
           <li><Link to="/services/faculty">Faculty Services</Link></li>
           <li><Link to="/services/department">Department Services</Link></li>
@@ -66,7 +66,7 @@ const Sidebar = () => {
           <li><Link to="/services/student">Student Services</Link></li>
           <li><Link to="/services/exam">Exam Services</Link></li>
           <li><Link to="/services/report">Report Services</Link></li>
-          
+           */}
           {/* Auth */}
           {/* <li className="sidebar-section-title">Account</li> */}
           <li><Link to="/auth/login">Login</Link></li>
@@ -75,10 +75,10 @@ const Sidebar = () => {
       </nav>
       
       {/* Additional Utility or Filter Options (Optional) */}
-      <div className="sidebar-utilities">
+      {/* <div className="sidebar-utilities">
         <input className="sidebar-search" type="text" placeholder="Search..." />
         <button className="create-action">Create New Course</button>
-      </div>
+      </div> */}
     </div>
   );
 };
