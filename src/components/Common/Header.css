@@ -1,152 +1,71 @@
-/* Header.css */
-
-.site-header {
-    background-color: #4a90e2;
+/* Footer Styles */
+.site-footer {
+    background-color: #2c3e50; /* Darker background for contrast */
     color: white;
-    padding: 15px 20px;
+    padding: 40px 20px;
+    border-top: 4px solid #ff6f61; /* Top border to match the theme */
+}
+
+.footer-top {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Wrap columns on smaller screens */
+    margin-bottom: 20px; /* Space between top and bottom sections */
 }
 
-.header-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+.footer-column {
+    flex: 1 1 200px; /* Allow columns to grow and shrink */
+    margin: 10px; /* Margin between columns */
 }
 
-/* Branding Block */
-.header-branding {
-    display: flex;
-    align-items: center;
+.footer-column h3, .footer-column h4 {
+    margin-bottom: 15px; /* Space below headings */
 }
 
-.logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+.footer-column p {
+    margin-bottom: 10px; /* Space below paragraph */
 }
 
-.site-name {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.tagline {
-    font-size: 0.9em;
-    color: #d1d1d1;
-}
-
-/* Navigation Menu */
-.header-nav {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.nav-list {
+.footer-column ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
-.nav-list li {
-    margin: 0 15px;
+.footer-column li {
+    margin: 8px 0; /* Space between list items */
 }
 
-.nav-list a {
+.footer-column a {
     color: white;
     text-decoration: none;
-    font-size: 1em;
     transition: color 0.3s;
 }
 
-.nav-list a:hover {
-    color: #ff6f61;
+.footer-column a:hover {
+    color: #ff6f61; /* Hover color */
 }
 
-/* Utility/User Actions */
-.header-utilities {
+.social-links {
     display: flex;
-    align-items: center;
+    gap: 10px; /* Space between social links */
 }
 
-.utility-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    margin-right: 15px;
-    transition: color 0.3s;
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle top border */
+    padding-top: 20px; /* Space above the copyright text */
 }
 
-.utility-btn:hover {
-    color: #ff6f61;
-}
-
-.cta-btn {
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.login-btn {
-    background-color: #4a90e2;
-}
-
-.register-btn {
-    background-color: #ff6f61;
-    margin-left: 10px;
-}
-
-.register-btn:hover {
-    background-color: #e55a50;
-}
-
-.login-btn:hover {
-    background-color: #3a7cb4;
-}
-
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .site-header {
-        flex-direction: column; /* Stack header elements vertically */
-        padding: 10px; /* Reduce padding */
-        align-items: flex-start; /* Align items to the start */
+    .footer-top {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        align-items: center; /* Center align columns */
     }
 
-    .header-branding {
-        margin-bottom: 10px; /* Space between branding and nav */
-    }
-
-    .site-name {
-        font-size: 1.3em; /* Smaller site name font size */
-    }
-
-    .tagline {
-        font-size: 0.8em; /* Smaller tagline font size */
-    }
-
-    .nav-list {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: center; /* Center align nav items */
-    }
-
-    .nav-list li {
-        margin: 5px 0; /* Space between nav items */
-    }
-
-    .utility-btn {
-        font-size: 18px; /* Slightly smaller utility button font size */
-    }
-
-    .cta-btn {
-        font-size: 0.9em; /* Smaller button font size */
-        padding: 8px 12px; /* Reduce padding */
+    .footer-column {
+        flex: 1 1 100%; /* Full width for columns */
+        text-align: center; /* Center text in columns */
     }
 }
