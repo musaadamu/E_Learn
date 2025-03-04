@@ -1,34 +1,29 @@
-/* Footer.css */
-
+/* Footer Styles */
 .site-footer {
-    background-color: #333;
+    background-color: #2c3e50; /* Darker background for contrast */
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 40px 20px;
+    border-top: 4px solid #ff6f61; /* Top border to match the theme */
 }
 
-/* Top Section */
 .footer-top {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px 10%;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap columns on smaller screens */
+    margin-bottom: 20px; /* Space between top and bottom sections */
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
+    flex: 1 1 200px; /* Allow columns to grow and shrink */
+    margin: 10px; /* Margin between columns */
 }
 
-.footer-column h3,
-.footer-column h4 {
-    margin-bottom: 10px;
-    color: #ff6f61;
+.footer-column h3, .footer-column h4 {
+    margin-bottom: 15px; /* Space below headings */
 }
 
 .footer-column p {
-    margin: 0;
+    margin-bottom: 10px; /* Space below paragraph */
 }
 
 .footer-column ul {
@@ -38,7 +33,7 @@
 }
 
 .footer-column li {
-    margin: 5px 0;
+    margin: 8px 0; /* Space between list items */
 }
 
 .footer-column a {
@@ -48,55 +43,29 @@
 }
 
 .footer-column a:hover {
-    color: #ff6f61;
+    color: #ff6f61; /* Hover color */
 }
 
-/* Social Links */
 .social-links {
     display: flex;
-    justify-content: flex-start;
-    padding: 0;
+    gap: 10px; /* Space between social links */
 }
 
-.social-links li {
-    margin-right: 15px;
-}
-
-/* Bottom Section */
 .footer-bottom {
-    background-color: #222;
-    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle top border */
+    padding-top: 20px; /* Space above the copyright text */
 }
 
-.footer-bottom p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .footer-top {
-        flex-direction: column; /* Stack footer columns vertically */
-        padding: 20px 5%; /* Adjust padding for smaller screens */
+        flex-direction: column; /* Stack columns vertically on small screens */
+        align-items: center; /* Center align columns */
     }
 
     .footer-column {
-        margin: 10px 0; /* Space between stacked columns */
+        flex: 1 1 100%; /* Full width for columns */
         text-align: center; /* Center text in columns */
-    }
-
-    .footer-column h3,
-    .footer-column h4 {
-        font-size: 1.2em; /* Smaller header font size */
-    }
-
-    .footer-column p,
-    .footer-bottom p {
-        font-size: 0.8em; /* Smaller paragraph font size */
-    }
-    
-    .social-links {
-        justify-content: center; /* Center social links */
-        margin-top: 10px; /* Add space above social links */
     }
 }
