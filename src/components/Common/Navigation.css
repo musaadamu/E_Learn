@@ -4,70 +4,56 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* General Navbar Styles */
+/* Main Navigation */
 .main-navigation {
-    display: flex;
-    justify-content: space-between; /* Space between title and nav items */
-    align-items: center;
-    background-color: #34495e; /* Dark background for the navbar */
-    padding: 10px 20px;
-    width: 100%; /* Extend to full width */
-    /* Remove max-width to allow full width */
-    margin: 0; /* Remove centering margin */
+    background-color: #283593; /* Darker blue for a more dynamic look */
+    padding: 15px 30px;
+    position: relative;
+    border-bottom: 4px solid #ff6f61; /* Beautiful border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-/* Title Styles */
-.navbar-title {
-    margin-left: 10px;
-    color: white;
-    font-size: 1.5rem;
-    white-space: nowrap; /* Prevent line break */
-}
-
-/* Hamburger Menu */
 .hamburger {
-    background: none; /* Remove background */
-    border: none; /* Remove border */
+    background: none;
+    border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 24px;
     cursor: pointer;
     display: none; /* Hidden by default, shown on mobile */
 }
 
-/* Navigation List Styles */
+.hamburger-icon {
+    display: inline-block;
+}
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Default to row layout */
+    display: flex;
     justify-content: flex-end;
-    align-items: center; /* Center items vertically */
 }
 
 .nav-links li {
-    margin: 0 15px; /* Adjusted margin for spacing */
+    margin: 0 20px; /* Increased spacing */
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem; /* Increased font size */
-    padding: 10px; /* Padding for clickable area */
-    transition: background-color 0.3s;
+    font-size: 18px; /* Slightly larger for better visibility */
+    transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+    color: #ffeb3b; /* Change hover color for contrast */
 }
 
-/* Logout Button */
-.logout-button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1.2rem;
+/* Call-to-Action Items */
+.nav-cta a {
+    font-weight: bold;
 }
 
 /* Mobile Styles */
@@ -77,18 +63,27 @@ body {
     }
 
     .nav-links {
-        flex-direction: column; /* Vertical layout for mobile */
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
         width: 100%;
-        max-height: 0; /* Initially hidden */
-        overflow: hidden; /* Prevent overflow */
-        transition: max-height 0.3s ease; /* Smooth transition */
+        background-color: #283593; /* Match main background */
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hidden by default */
+        border-top: 4px solid #ff6f61; /* Same border for mobile menu */
     }
 
-    .nav-links.active {
-        max-height: 300px; /* Adjust based on your items */
+    .nav-links.open {
+        display: flex; /* Show links when open */
     }
 
     .nav-links li {
-        margin: 10px 0; /* Spacing between items in mobile view */
+        margin: 15px 0; /* Margin for vertical spacing */
+    }
+
+    .nav-links a {
+        font-size: 20px; /* Larger font size for mobile */
+        padding: 12px; /* Add padding for clickable area */
     }
 }

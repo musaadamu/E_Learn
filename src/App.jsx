@@ -66,25 +66,11 @@ function App() {
     <AuthProvider>
       <Router>
         <div className="app-container">
-          {/* Sidebar Toggle Button (visible on mobile) */}
-          <button 
-            className="sidebar-toggle" 
-            onClick={toggleSidebar} 
-            aria-label="Toggle sidebar"
-          >
-            {sidebarActive ? "✕" : "☰"}
-          </button>
-
-          {/* Sidebar */}
-          {sidebarActive && (
-            <div className="sidebar-wrapper">
-              <Sidebar />
-            </div>
-          )}
-
-          {/* Header (includes primary navigation) */}
-          <Navigation />
-
+        
+         <header>
+            <Navigation /> 
+          </header>
+          
           {/* Main Content */}
           <main className="main-content">
             <Routes>

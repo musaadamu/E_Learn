@@ -1,15 +1,15 @@
-/* Sidebar.css */
-
 /* General styles */
 .site-sidebar {
-    width: 250px;
-    background-color: #4a90e2;
+    width: 220px; /* Adjusted width for better fit */
+    background-color: #283593; /* Match navigation bar background */
     color: white;
     padding: 20px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     transition: width 0.3s;
+    border-right: 4px solid #ff6f61; /* Match navigation border */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
 /* User Profile Block */
@@ -24,6 +24,7 @@
     height: 50px;
     border-radius: 50%;
     margin-right: 15px;
+    border: 2px solid #ff6f61; /* Border around avatar */
 }
 
 .user-info {
@@ -53,7 +54,7 @@
 }
 
 .sidebar-nav li {
-    margin: 15px 0;
+    margin: 15px 0; /* Increased margin for better spacing */
 }
 
 .sidebar-nav a {
@@ -62,12 +63,13 @@
     font-size: 1em;
     transition: color 0.3s;
     display: block; /* Makes the entire area clickable */
-    padding-left: 10px; /* Add left padding for a clean look */
+    padding: 10px; /* Add padding for a better clickable area */
+    border-radius: 5px; /* Rounded corners for links */
 }
 
 .sidebar-nav a:hover {
+    background-color: rgba(255, 105, 135, 0.2); /* Subtle background on hover */
     color: #ff6f61;
-    padding-left: 20px; /* Indicate active state by increasing padding */
 }
 
 /* Utilities Block */
@@ -81,7 +83,7 @@
     border: 2px solid #fff;
     border-radius: 5px;
     margin-bottom: 10px;
-    background-color: #333;
+    background-color: #333; /* Darker input background */
     color: white;
 }
 
@@ -92,7 +94,7 @@
 .create-action {
     width: 100%;
     padding: 10px;
-    background-color: #ff6f61;
+    background-color: #ff6f61; /* Call-to-action button color */
     border: none;
     border-radius: 5px;
     color: white;
@@ -101,7 +103,7 @@
 }
 
 .create-action:hover {
-    background-color: #e55a50;
+    background-color: #e55a50; /* Darker on hover */
 }
 
 /* Responsive Styles */
